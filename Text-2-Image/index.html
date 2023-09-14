@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image By MrOmer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-removebg-preview.png">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            perspective: 1000px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .button-container {
+            text-align: center;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.5s ease, transform 0.3s ease;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        button:hover {
+            transform: rotateX(20deg) scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        button::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        img {
+            max-width: 100%;
+            display: block;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        /* This imports the Roboto font with a weight of 500 (medium) from Google Fonts */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        /* This imports the Roboto font with a weight of 500 (medium) from Google Fonts */
+        
+        footer {
+            width: auto;
+            /* Adjusting the width based on content */
+            text-align: center;
+            position: fixed;
+            /* Keeping the footer fixed to the viewport */
+            bottom: 10px;
+            /* Positioning the footer 10 pixels up from the bottom of the viewport */
+            left: 50%;
+            /* Centering the left edge at the 50% mark of the viewport */
+            transform: translateX(-50%);
+            /* This shifts it back half of its own width to center it */
+            padding: 10px 20px;
+            /* Added some left and right padding for aesthetics */
+            background-color: transparent;
+            font-family: 'Roboto', sans-serif;
+            /* Using the Roboto font with a fallback to any sans-serif font */
+            font-weight: 500;
+            /* Medium weight for Roboto, making it strong */
+            z-index: 1000;
+            /* Ensuring the footer stays on top of other elements */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">TEXT TO IMAGE GENERATOR</h1>
+        <input type="text" id="textInput" placeholder="Enter a description, e.g., 'mushroom tree'">
+        <div class="button-container">
+            <button onclick="fetchImage()">Get Image</button>
+        </div>
+        <img id="resultImage" src="" alt="">
+    </div>
+
+    <footer>
+        © Copyright 2023. Mohammed Omer
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+</html>

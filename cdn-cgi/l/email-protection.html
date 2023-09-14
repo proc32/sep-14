@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Email</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="email-container">
+        <p class="email" id="email"></p>
+    </div>
+    <script>
+        function decodeEmail(encodedEmail) {
+            let email = '';
+            for (let i = 0; i < encodedEmail.length; i += 2) {
+                email += String.fromCharCode(parseInt(encodedEmail.substr(i, 2), 16));
+            }
+            return email;
+        }
+
+        const encodedEmail = "696e666f406d6f68616d6d65646f6d65722e636f6d";
+
+        const emailElement = document.getElementById("email");
+        emailElement.textContent = decodeEmail(encodedEmail);
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

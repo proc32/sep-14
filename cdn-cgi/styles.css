@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.email-container {
+    position: relative;
+}
+
+.email {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    text-transform: lowercase;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    animation: outlineAnimation 5s infinite;
+}
+
+@keyframes outlineAnimation {
+    0% {
+        outline: 2px solid rgb(255, 0, 0);
+    }
+    33% {
+        outline: 2px solid rgb(0, 255, 0);
+    }
+    66% {
+        outline: 2px solid rgb(0, 0, 255);
+    }
+    100% {
+        outline: 2px solid rgb(255, 0, 0);
+    }
+}

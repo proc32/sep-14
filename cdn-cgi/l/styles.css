@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    /* Change background color to black */
+}
+
+.email-container {
+    position: relative;
+}
+
+.email {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    text-transform: lowercase;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    animation: outlineAnimation 5s infinite, wiggleAnimation 2s infinite;
+    /* Add the new wiggle animation */
+}
+
+@keyframes outlineAnimation {
+    0% {
+        outline: 2px solid rgb(255, 0, 0);
+    }
+    33% {
+        outline: 2px solid rgb(0, 255, 0);
+    }
+    66% {
+        outline: 2px solid rgb(0, 0, 255);
+    }
+    100% {
+        outline: 2px solid rgb(255, 0, 0);
+    }
+}
+
+@keyframes wiggleAnimation {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes outlineAnimation {
+    0% {
+        outline: 2px solid rgb(255, 0, 0);
+    }
+    33% {
+        outline: 2px solid rgb(0, 255, 0);
+    }
+    66% {
+        outline: 2px solid rgb(0, 0, 255);
+    }
+    100% {
+        outline: 2px solid rgb(255, 0, 0);
+    }
+}
